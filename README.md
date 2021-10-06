@@ -1,4 +1,4 @@
 #UFPA
-#Estrutura de dados
-#Problema do Carteiro Chines
+Estrutura de dados
+Problema do Carteiro Chines
 
