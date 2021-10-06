@@ -19,5 +19,5 @@ A Solução:
 
 
 Aplicação do PCC:
-     As principais situações em que esse algoritimo pode ser aplicado são referentes para otimização de percursos. Por exemplo, a rota de um caminhão de lixo, com o pcc, é possivel economizar o combustivel, pois será evitado passagens repetidas desnecessárias e também quando precisar repetir alguma passagem, essa será de gasto menor. Além de economizar dinheiro, também economiza tempo, pois do mesmo modo que com a economia de combustivel, será evitado a passagem do automóvel por um mesmo caminho sem que seja extremamente necessário.
+
 
