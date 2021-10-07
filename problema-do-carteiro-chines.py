@@ -110,7 +110,15 @@ def enconta_menor_caminho(graph, vertice_to):
 
     path.reverse()
 
-    return ' -> '.join(path)
+    return ' '.join(path)
+
+def encontra_valor_menor_caminho(menor_caminho):
+    menor_caminho = menor_caminho.split()
+    dist = 0
+    for x in range(len(menor_caminho)-1):
+        dist = dist + graph.distancia[menor_caminho[x], menor_caminho[x+1]]
+
+    return dist
        
 '''Representando um grafo'''    
 
@@ -162,9 +170,42 @@ if len(graph.impares) == 0:  # se o grafo não tem vertices de grau impar é um 
     distancia = distancia/2  #divide por 2 pois cada aresta é declarada duas vezes visto que ela é declarada para o ponto inicial e o final
     print(f"A distância mínima a ser percorrida é {distancia}")
 
-# se o grafo tem vertices de grau impar ele é um grafo não euleriano portanto deve-se aplicar o algorimo de dijkstra nesses vertices, dois a dois afim
-# de encontrar os menores caminhos caminhos entre eles para duplica-los e então gerar artificialmente um grafo euleriano que tera suas arestas somadas
-# e assim o menor percurso será encontrado
+'''
+se o grafo tem vertices de grau impar ele é um grafo não euleriano portanto deve-se aplicar o algorimo de dijkstra nesses vertices, dois a dois afim
+ de encontrar os menores caminhos caminhos entre eles para duplica-los e então gerar artificialmente um grafo euleriano que tera suas arestas somadas
+ e assim o menor percurso será encontrado
+'''
 
+else:
+    menor_distancia = float('inf')
+    menor_caminho = []
+    caminho_atual = []
+    lista_caminho_atual = []
+
+    # encontra a distancia do vertice x para todos os outros e guarda a menor
+    for x in graph.impares:
+        distancia = float('inf')
+        
+        for vertice2 in graph.impares:
+           
+            if distancia < menor_distancia and distancia != 0:
+                menor_distancia = distancia
+                menor_caminho = caminho_atual
+                distancia = 0
+            else:
+                distancia = 0
     
-          
+            if x == vertice2:
+                pass
+    
+            else:
+                dijkstra(graph, x)
+                caminho_atual = enconta_menor_caminho(graph, vertice2)
+                distancia = encontra_valor_menor_caminho(caminho_atual)
+                
+                
+        
+    
+        
+              
+        
