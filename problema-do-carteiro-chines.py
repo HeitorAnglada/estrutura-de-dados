@@ -204,7 +204,7 @@ else:
                 distancia = encontra_valor_menor_caminho(caminho_atual)
                 
                 
-        
+        '''O problema do algoritimo dijkstra aplicado, foi a impossibilidade dele rodar uma segunda vez, ou seja, ao realizar a primeira operação, as variaveis nesse algoritimo não podiam ser redefinidas'''
     
         
               
