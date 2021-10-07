@@ -205,7 +205,7 @@ else:
                 
                 
         '''O problema do algoritimo dijkstra aplicado, foi a impossibilidade dele rodar uma segunda vez, ou seja, ao realizar a primeira operação, 
-        as variaveis nesse algoritimo não podiam ser redefinidas'''
+        as variaveis nesse algoritimo não podiam ser redefinidas. Um dos principais motivos para não progradir na resolução'''
     
         
               
